@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b03329ff-700d-4a1f-8ea7-4211ba7a5f2b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kafkaProducer/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kafkaProducer/IKafkaConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kafkaProducer/ProducerCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-consumer/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka-consumer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-consumer/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka-consumer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-consumer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka-consumer/src/main/java/kafkaConsumer/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-consumer/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka-consumer/src/main/java/kafkaConsumer/ConsumerCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-consumer/src/main/java/kafkaConsumer/ConsumerCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka-consumer/src/main/java/kafkaConsumer/IKafkaConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka-consumer/src/main/java/kafkaConsumer/IKafkaConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kafkaProducer/IKafkaConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafkaProducer/IKafkaConstants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +31,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -44,9 +49,9 @@
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "M:/Java/kakfa-producer",
+    "last_opened_file_path": "M:/Java/learningkafka/kafka-consumer",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -106,6 +111,9 @@
       <workItem from="1702643628506" duration="1435000" />
       <workItem from="1702645076291" duration="103000" />
       <workItem from="1702645459223" duration="1270000" />
+      <workItem from="1702648611279" duration="2191000" />
+      <workItem from="1702822564521" duration="1960000" />
+      <workItem from="1702899710723" duration="2117000" />
     </task>
     <servers />
   </component>

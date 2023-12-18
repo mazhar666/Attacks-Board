@@ -1,6 +1,7 @@
-package kafkaConsumer;
-
+import kafkaConsumer.ConsumerCreator;
+import kafkaConsumer.IKafkaConstants;
 import org.apache.kafka.clients.consumer.Consumer;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 
 import java.time.Duration;
@@ -24,12 +25,12 @@ public class App {
                     continue;
                 }
             }
-            records.forEach(record->{
+            for (ConsumerRecord<String, String> record : records) {
                 System.out.println("Record Key " + record.key());
                 System.out.println("Record value " + record.value());
                 System.out.println("Record partition " + record.partition());
                 System.out.println("Record offset " + record.offset());
-            });
+            }
             consumer.commitAsync();
         }
         System.out.println("closing");

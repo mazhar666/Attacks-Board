@@ -1,3 +1,5 @@
+package kafkaConsumer;
+
 import java.util.Properties;
 
 import kafkaConsumer.IKafkaConstants;
