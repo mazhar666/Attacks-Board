@@ -1,7 +1,6 @@
-package kafkaConsumer;
-
 import java.util.Properties;
 
+import kafkaConsumer.IKafkaConstants;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 
