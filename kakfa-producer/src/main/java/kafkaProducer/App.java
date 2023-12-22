@@ -12,10 +12,10 @@ public class App {
     static void runProducer(){
         Producer<String,String> producer = ProducerCreator.createProducer();
         for (int i = 0; i < IKafkaConstants.MESSAGE_COUNT; i++) {
-            ProducerRecord<String, String> record = new ProducerRecord<>(IKafkaConstants.TOPIC_NAME , "this is record "+ i);
+            ProducerRecord<String, String> record = new ProducerRecord<>("test-Kafka",""+i,"test");
             try {
                 RecordMetadata metadata = producer.send(record).get();
-                System.out.println("Record sent with key " + i + " to partition " + metadata.partition()
+                System.out.println("Record sent with key " + i
                         + " with offset " + metadata.offset());
                 Thread.sleep(100);
             }catch (Exception e ){

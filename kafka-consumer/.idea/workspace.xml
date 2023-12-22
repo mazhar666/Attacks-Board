@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c86bcf2-67fc-43bc-bcfe-fa68a48d5f5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kafkaConsumer/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kafkaConsumer/ConsumerCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafkaConsumer/ConsumerCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kafkaConsumer/IKafkaConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafkaConsumer/IKafkaConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kakfa-producer/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kakfa-producer/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../kakfa-producer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kakfa-producer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kakfa-producer/src/main/java/kafkaProducer/IKafkaConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kakfa-producer/src/main/java/kafkaProducer/IKafkaConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kakfa-producer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/src/main/java/kafkaProducer/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kakfa-producer/src/main/java/kafkaProducer/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +34,15 @@
   &quot;isMigrated&quot;: true
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2ZZxrj4wEXpndTQqHNYGSDB0Iap" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -77,6 +76,8 @@
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.sdkman/candidates/java/11.0.21-ms" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="kafka-consumer" />
       <extension name="coverage">
@@ -117,11 +118,27 @@
       <workItem from="1702645382599" duration="1065000" />
       <workItem from="1702648603170" duration="2977000" />
       <workItem from="1702822561151" duration="3434000" />
-      <workItem from="1702899738489" duration="1578000" />
+      <workItem from="1702899738489" duration="3406000" />
+      <workItem from="1702931788813" duration="267000" />
+      <workItem from="1702972403282" duration="14000" />
+      <workItem from="1702972545688" duration="21000" />
+      <workItem from="1702988282222" duration="4296000" />
+      <workItem from="1702992918063" duration="4351000" />
+      <workItem from="1703180487419" duration="2566000" />
+      <workItem from="1703186627025" duration="4658000" />
+      <workItem from="1703197982892" duration="823000" />
+      <workItem from="1703198821272" duration="76000" />
+      <workItem from="1703200308839" duration="603000" />
+      <workItem from="1703244048185" duration="2064000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.flink:flink-core" />
   </component>
 </project>

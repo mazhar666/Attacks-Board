@@ -1,5 +1,9 @@
 import kafkaConsumer.ConsumerCreator;
 import kafkaConsumer.IKafkaConstants;
+import org.apache.flink.api.common.eventtime.WatermarkStrategy;
+import org.apache.flink.connector.kafka.source.KafkaSource;
+import org.apache.flink.streaming.api.datastream.DataStream;
+import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -8,33 +12,15 @@ import java.time.Duration;
 import java.util.Collections;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         runConsumer();
     }
-    static void runConsumer(){
-        Consumer<String,String> consumer = ConsumerCreator.createConsumer();
-        consumer.subscribe(Collections.singletonList(IKafkaConstants.TOPIC_NAME));
-        int noMessagesFound=0;
-        while(true){
-            ConsumerRecords<String,String> records = consumer.poll(Duration.ofSeconds(1000));
-            if (records.count() ==0){
-                noMessagesFound++;
-                if (noMessagesFound> IKafkaConstants.MAX_NO_MESSAGE_FOUND_COUNT){
-                    break;
-                }else {
-                    continue;
-                }
-            }
-            for (ConsumerRecord<String, String> record : records) {
-                System.out.println("Record Key " + record.key());
-                System.out.println("Record value " + record.value());
-                System.out.println("Record partition " + record.partition());
-                System.out.println("Record offset " + record.offset());
-            }
-            consumer.commitAsync();
-        }
-        System.out.println("closing");
-        consumer.close();
+    static void runConsumer() throws Exception {
+        KafkaSource<String> consumer = ConsumerCreator.createConsumer();
+        StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        DataStream<String> stream = env.fromSource(consumer, WatermarkStrategy.noWatermarks(), "Kafka Source");
+        stream.print();
+        env.execute("test job" );
     }
 
 }

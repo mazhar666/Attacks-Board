@@ -1,23 +1,20 @@
 package kafkaConsumer;
-
-import java.util.Properties;
-
-import kafkaConsumer.IKafkaConstants;
-import org.apache.kafka.clients.consumer.Consumer;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.flink.api.common.serialization.SimpleStringSchema;
+import org.apache.flink.connector.kafka.source.KafkaSource;
+import org.apache.flink.connector.kafka.source.enumerator.initializer.OffsetsInitializer;
+import org.apache.flink.connector.kafka.source.reader.deserializer.KafkaRecordDeserializationSchema;
+import org.apache.kafka.common.serialization.StringDeserializer;
 
 public class ConsumerCreator {
-    public static Consumer<String,String> createConsumer(){
+    public static KafkaSource<String> createConsumer(){
 
-        Properties properties = new Properties();
-        properties.put("bootstrap.servers", IKafkaConstants.KAFKA_BROKERS);
-        properties.put("key.deserializer",
-                "org.apache.kafka.common.serialization.StringDeserializer");
-        properties.put("value.deserializer",
-                "org.apache.kafka.common.serialization.StringDeserializer");
-        String groupName = "consumer-group1";
-        properties.put("group.id", groupName);
-
-        return new KafkaConsumer<>(properties);
+        return KafkaSource.<String>builder()
+                .setBootstrapServers(IKafkaConstants.KAFKA_BROKERS)
+                .setTopics(IKafkaConstants.TOPIC_NAME)
+                .setGroupId("consumer-group1")
+                .setStartingOffsets(OffsetsInitializer.latest())
+                .setValueOnlyDeserializer(new SimpleStringSchema())
+                .setDeserializer(KafkaRecordDeserializationSchema.valueOnly(StringDeserializer.class))
+                .build();
     }
 }
