@@ -1,11 +1,10 @@
-package Deserializers;
-
+package Utilz.Deserializers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.common.errors.SerializationException;
 import org.apache.kafka.common.serialization.Deserializer;
 
 import java.util.Map;
-public class JSONDeserializer<T> implements Deserializer<T> {
+public class EventDeserializer<T> implements Deserializer<T>  {
     private ObjectMapper objectMapper = new ObjectMapper();
 
     private Class<T> tClass;
@@ -13,7 +12,7 @@ public class JSONDeserializer<T> implements Deserializer<T> {
     /**
      * Default constructor needed by Kafka
      */
-    public JSONDeserializer() {
+    public EventDeserializer() {
     }
 
     @SuppressWarnings("unchecked")

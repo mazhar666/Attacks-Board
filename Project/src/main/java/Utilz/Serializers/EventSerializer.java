@@ -1,17 +1,15 @@
-package Serializers;
-
+package Utilz.Serializers;
 import org.apache.kafka.common.serialization.Serializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.common.errors.SerializationException;
-
 import java.util.Map;
-public class JSONSerializer<T> implements Serializer<T> {
+public class EventSerializer<T> implements Serializer<T>  {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     /**
      * Default constructor needed by Kafka
      */
-    public JSONSerializer() {
+    public EventSerializer() {
     }
 
     @Override
@@ -33,5 +31,4 @@ public class JSONSerializer<T> implements Serializer<T> {
     @Override
     public void close() {
     }
-
 }
