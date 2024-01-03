@@ -1,26 +1,19 @@
 import kafkaConsumer.ConsumerCreator;
-import kafkaConsumer.IKafkaConstants;
-import org.apache.flink.api.common.eventtime.WatermarkStrategy;
-import org.apache.flink.connector.kafka.source.KafkaSource;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.kafka.clients.consumer.Consumer;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
-
-import java.time.Duration;
-import java.util.Collections;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
 
 public class App {
     public static void main(String[] args) throws Exception {
         runConsumer();
     }
     static void runConsumer() throws Exception {
-        KafkaSource<String> consumer = ConsumerCreator.createConsumer();
+        FlinkKafkaConsumer<String> consumer = ConsumerCreator.createConsumer();
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
-        DataStream<String> stream = env.fromSource(consumer, WatermarkStrategy.noWatermarks(), "Kafka Source");
+//        DataStream<String> stream = env.addSource(consumer);
+        DataStream<String> stream = env.addSource(consumer);
         stream.print();
-        env.execute("test job" );
+        env.execute("test" );
     }
 
 }

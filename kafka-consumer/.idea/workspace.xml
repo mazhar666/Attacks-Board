@@ -5,14 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c86bcf2-67fc-43bc-bcfe-fa68a48d5f5a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../kafka-producer/src/main/java/Deserializers/JSONDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../kafka-producer/src/main/java/Serializers/JSONSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kafkaConsumer/ConsumerCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafkaConsumer/ConsumerCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kakfa-producer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kakfa-producer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kakfa-producer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kakfa-producer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../kakfa-producer/src/main/java/kafkaProducer/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../kakfa-producer/src/main/java/kafkaProducer/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kafkaConsumer/IKafkaConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafkaConsumer/IKafkaConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/src/main/java/kafkaProducer/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/src/main/java/kafkaProducer/IKafkaConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kakfa-producer/src/main/java/kafkaProducer/ProducerCreator.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +40,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;IxBahy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="227df8fd-ecbb-4617-b9a2-e0618d6e13cc" />
+        <option name="url" value="https://github.com/IxBahy/learningkafka.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -56,12 +81,15 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;M:/Java/learningkafka/kafka-consumer&quot;,
+    &quot;last_opened_file_path&quot;: &quot;M:/Java/learningkafka/kafka-producer&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -76,7 +104,7 @@
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.sdkman/candidates/java/11.0.21-ms" />
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="kafka-consumer" />
@@ -99,6 +127,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-1.8.0_392-corretto-1.8.0_392-3183f394aec4-cb300fc7" />
         <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
       </set>
     </attachedChunks>
@@ -129,7 +158,19 @@
       <workItem from="1703197982892" duration="823000" />
       <workItem from="1703198821272" duration="76000" />
       <workItem from="1703200308839" duration="603000" />
-      <workItem from="1703244048185" duration="2064000" />
+      <workItem from="1703244048185" duration="4033000" />
+      <workItem from="1703248251196" duration="4930000" />
+      <workItem from="1703260864602" duration="297000" />
+      <workItem from="1703261171559" duration="696000" />
+      <workItem from="1703324500070" duration="7383000" />
+      <workItem from="1703417471168" duration="264000" />
+      <workItem from="1703498052840" duration="2467000" />
+      <workItem from="1703959108897" duration="2385000" />
+      <workItem from="1703964275325" duration="3000" />
+      <workItem from="1704187070999" duration="625000" />
+      <workItem from="1704199039446" duration="2952000" />
+      <workItem from="1704294528983" duration="22000" />
+      <workItem from="1704294618436" duration="5641000" />
     </task>
     <servers />
   </component>

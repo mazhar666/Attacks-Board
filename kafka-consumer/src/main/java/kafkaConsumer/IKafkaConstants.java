@@ -1,7 +1,7 @@
 package kafkaConsumer;
 
 public interface IKafkaConstants {
-    String KAFKA_BROKERS = "localhost:9092";
+    String KAFKA_BROKERS = " localhost:9092";
 
     String CLIENT_ID="client-1";
     Integer MESSAGE_COUNT=1000;
