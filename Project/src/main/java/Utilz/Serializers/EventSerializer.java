@@ -1,34 +1,33 @@
 package Utilz.Serializers;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import org.apache.kafka.common.header.Headers;
 import org.apache.kafka.common.serialization.Serializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.kafka.common.errors.SerializationException;
+
 import java.util.Map;
-public class EventSerializer<T> implements Serializer<T>  {
+
+public class EventSerializer<Event> implements Serializer<Event> {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    /**
-     * Default constructor needed by Kafka
-     */
-    public EventSerializer() {
-    }
+    public EventSerializer(){}
+
 
     @Override
-    public void configure(Map<String, ?> props, boolean isKey) {
-    }
-
-    @Override
-    public byte[] serialize(String topic, T data) {
-        if (data == null)
+    public byte[] serialize(String s, Event event) {
+        if (event == null){
+            System.out.println("Null received at serializing");
             return null;
-
-        try {
-            return objectMapper.writeValueAsString(data).getBytes();
-        } catch (Exception e) {
-            throw new SerializationException("Error serializing JSON message", e);
         }
+        try {
+            return objectMapper.writeValueAsBytes(event);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @Override
     public void close() {
+        Serializer.super.close();
     }
 }

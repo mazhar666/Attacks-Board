@@ -1,42 +1,38 @@
 package Utilz.Deserializers;
+import Events.Event;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.flink.api.common.serialization.DeserializationSchema;
+import org.apache.flink.api.common.typeinfo.TypeInformation;
 import org.apache.kafka.common.errors.SerializationException;
-import org.apache.kafka.common.serialization.Deserializer;
 
-import java.util.Map;
-public class EventDeserializer<T> implements Deserializer<T>  {
-    private ObjectMapper objectMapper = new ObjectMapper();
+import java.io.IOException;
+import java.util.Arrays;
 
-    private Class<T> tClass;
+public class EventDeserializer implements DeserializationSchema<Event> {
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
-    /**
-     * Default constructor needed by Kafka
-     */
+    private Class<Event> tClass;
+
     public EventDeserializer() {
     }
 
-    @SuppressWarnings("unchecked")
     @Override
-    public void configure(Map<String, ?> props, boolean isKey) {
-        tClass = (Class<T>) props.get("JsonPOJOClass");
-    }
-    @Override
-    public T deserialize(String topic, byte[] bytes) {
+    public Event deserialize(byte[] bytes) throws IOException {
         if (bytes == null)
             return null;
-
-        T data;
-        try {
-            data = objectMapper.readValue(bytes, tClass);
-        } catch (Exception e) {
-            throw new SerializationException(e);
-        }
-
+        Event data;
+            data = objectMapper.readValue(bytes, Event.class);
         return data;
     }
 
     @Override
-    public void close() {
+    public boolean isEndOfStream(Event event) {
+        return false;
+    }
 
+
+    @Override
+    public TypeInformation<Event> getProducedType() {
+        return null;
     }
 }
